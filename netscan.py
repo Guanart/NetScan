@@ -17,14 +17,11 @@
 # ------------------------------------------------------------------
 
 from scapy.all import *
-import sys
-import os
 import socket
 import argparse
 import logging
 import netaddr, netifaces
 import json
-import pickle
 import requests
 
 # Logging
@@ -146,7 +143,7 @@ def udp_scan(dst_ip, dst_port):
 
 # Port Scanning Main
 def port_discovery(clients_instances):
-    dst_ports = [20,21,22,23,24,25,53,80,443,3306] # Modify
+    dst_ports = [21,80] # Modify
         
     for client_name in clients_instances:
         for dst_port in dst_ports:
