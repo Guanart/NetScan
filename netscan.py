@@ -19,13 +19,14 @@
 from scapy.all import *
 import socket
 import argparse
-import logging
 import netaddr, netifaces
 import json
 import requests
+# import logging
 
-# Logging
-logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
+# Logging - Manage errors
+# logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
+
 # Banner
 def print_banner():
     banner = '''
